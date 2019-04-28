@@ -6,7 +6,7 @@ set -e
 
 MAX_SECONDS_BETWEEN_PARTS=5
 DATE_FORMAT="%Y-%m-%d_%H-%M"
-
+OUTPUT_FILE_EXTENSION=".avi"
 
 files=( $@ )
 start_timestamps=( $(stat -c "%Y" ${files[@]}) )
@@ -34,8 +34,9 @@ for i in "${!files[@]}"; do
             mencoder -oac copy -ovc copy ${current_files[@]} -o ${current_output}
         fi
 
-        current_output=$(date --date="@${start_timstamp}" --utc +"${DATE_FORMAT}")
+        current_output=$(date --date="@${start_timstamp}" --utc +"${DATE_FORMAT}")${OUTPUT_FILE_EXTENSION}
         current_files=($file)
+
     else
         current_files+=($file)
     fi
