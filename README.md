@@ -60,4 +60,4 @@ Now I have a full video of every trip :)
 
 ## License
 
-Feel free to [do whatever you want with this code](LICENSE.MD).
+Feel free to [do whatever you want with this code](LICENSE).
