@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Video combiner by tofran
+# Automatically combine multipart videos 
+# https://github.com/tofran/video-combiner
+# usage:
+#   $ video-combiner.sh video1.avi video2.avi video3.avi
 
 set -e
 
