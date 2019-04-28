@@ -8,6 +8,7 @@
 MAX_SECONDS_BETWEEN_PARTS=5
 OUTPUT_FILE_EXTENSION=".avi"
 OUTPUT_DATE_FORMAT="%Y-%m-%d_%H-%M_%Z"
+TOUCH_DATE_FORMAT="%Y%m%d%H%M.%S"
 
 set -e
 
@@ -24,6 +25,7 @@ generate_video () {
         read -p "Press enter to contune..."
 
         mencoder -oac copy -ovc copy ${files[@]} -o ${output_file}
+        touch -camt ${touch_date} ${output_file}
 
     fi
 }
