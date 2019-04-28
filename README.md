@@ -6,7 +6,7 @@ Great for combinng dash cam / helment cam videos, beacause these cameras usually
 
 ## Requirements
 
-Uses [MEncoder](http://www.mplayerhq.hu/design7/news.html) because currently it is hardcoded for `avi` files.
+Uses [MEncoder](http://www.mplayerhq.hu/design7/news.html) - currently it is hardcoded for `avi` files.
 
 Can be easily adapted to use `ffmpeg` for `mp4`.
 
@@ -14,6 +14,7 @@ Can be easily adapted to use `ffmpeg` for `mp4`.
 ## Real world example
 
 Here I have 22 files from my dash cam, I want to group them by "trip".
+
 The desired result are 4 files (trips).
 
 | Filename     | Date             | Duration | Trip |
@@ -41,7 +42,7 @@ The desired result are 4 files (trips).
 | MOVI0032.avi | 1029/04/22@17:43 | 180s     | C    |
 | MOVI0033.avi | 1029/04/22@17:44 | 74s      | C    |
 
-The script in actioon:
+The script in action:
 
 ```bash
 $ video-combiner.sh my_videos/*
